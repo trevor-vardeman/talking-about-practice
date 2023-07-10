@@ -5,3 +5,9 @@
 function greet(name){
   return `Hello, ${name} how are you doing today?`
 }
+
+// best practice
+// const greet = name => `Hello, ${name} how are you doing today?`;
+
+// explanation
+// can simplify it to a single line
