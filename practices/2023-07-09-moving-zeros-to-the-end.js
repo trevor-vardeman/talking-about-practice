@@ -3,7 +3,20 @@
 
 
 function moveZeros(arr) {
-  return
+  const newArray = []
+  let counter = 0
+  arr.map((element) => {
+    if (element === 0) {
+      counter += 1
+    } else {
+      newArray.push(element)
+    }
+  }) 
+  console.log(counter, "counter")
+  for (let i = 0; i < counter; i++) {
+    newArray.push(0)
+  }
+  return newArray
 }
 
 console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]))
