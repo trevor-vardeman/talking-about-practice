@@ -11,3 +11,12 @@ function isDivisible(n, x, y) {
     return true
   } else return false
 }
+
+// best practice
+
+// function isDivisible(n, x, y) {
+//   return (n % x === 0 && n % y === 0) ? true : false;
+// }
+
+// explanation
+// i just like that this used the ternary operator instead of if/else, but it's functionally the same!
