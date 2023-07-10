@@ -16,8 +16,17 @@ function makeNegative(num) {
   if (num > 0) return -num
 }
 
-console.log(makeNegative(5))
-console.log(makeNegative(-2))
-console.log(makeNegative(0))
-console.log(makeNegative(undefined))
-console.log(makeNegative(false))
+// better solutions
+// function makeNegative(num) {
+//   return -Math.abs(num);
+// }
+
+// explanation
+// Math.abs gets the absolute value of the nubmer, then the negative operator in front of it makes it negative. this is elegant.
+
+// function makeNegative(num) {
+//   return num < 0 ? num : -num;
+// }
+
+// explanation
+// once again, the ternary operator is simpler than my solution but more elegant. 
