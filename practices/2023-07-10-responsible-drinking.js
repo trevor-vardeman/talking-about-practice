@@ -13,3 +13,12 @@
 
 // To keep the things simple, we'll consider that any "numbered thing" in the string is a drink. Even "1 bear" -> "1 glass of water"; or "1 chainsaw and 2 pools" -> "3 glasses of water"...
 
+function hydrate(s) {
+    const arrayOfNumbers = s.match(/[0-9]/g).map(num => parseInt(num))
+    const summedNumbers = arrayOfNumbers.reduce((accumulator, x) => accumulator += x)
+    return summedNumbers > 1 ? `${summedNumbers} glasses of water` : "1 glass of water"
+  }
+
+hydrate("1 beer")
+hydrate("2 glasses of wine and 1 shot")
+hydrate("1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer")
