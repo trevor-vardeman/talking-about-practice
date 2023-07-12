@@ -13,4 +13,12 @@ function isLeapYear(year) {
     if (year % 100 === 0) return false
     if (year % 4 === 0) return true
     return false
-  }
+}
+
+// another solution
+
+// function isLeapYear(year) {
+//     return (year % 100 !== 0 && year % 4 === 0) || year % 400 === 0;
+//   }
+
+// i like this simplified version which returns true if any of the line is true, or, because it's an or statement, simply returns false if neither are true. nice and elegant.
