@@ -14,11 +14,9 @@
 
 // If you enjoyed this kata more advanced and generalized version of it can be found in the Xbonacci kata
 
-// [Personal thanks to Professor Jim Fowler on Coursera for his awesome classes that I really recommend to any math enthusiast and for showing me this mathematical curiosity too with his usual contagious passion :)]
-
 function tribonacci(signature,n){
     if (n === 0) return []
-    if (n < 3) return [...signature].slice(n - n, n)
+    if (n < 3) return [...signature].slice(0, n)
     let tribonacciSequence = [...signature]
     let nextNumber = signature.reduce((sum, x) => sum += x)
     for (let i = 0; i < n - 3; i++) {
@@ -26,3 +24,15 @@ function tribonacci(signature,n){
     }
     return tribonacciSequence
   }
+
+// better solution
+
+// function tribonacci(signature,n){  
+//     for (var i = 0; i < n-3; i++) { // iterate n times
+//       signature.push(signature[i] + signature[i+1] + signature[i+2]); // add last 3 array items and push to trib
+//     }
+//     return signature.slice(0, n); //return trib - length of n
+//   }
+
+// explanation
+// eliminates the need of the first two lines of my solution
