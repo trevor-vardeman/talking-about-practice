@@ -7,3 +7,10 @@
 
 // Only valid years (positive integers) will be tested, so you don't have to validate them
 // Examples can be found in the test fixture.
+
+function isLeapYear(year) {
+    if (year % 400 === 0) return true
+    if (year % 100 === 0) return false
+    if (year % 4 === 0) return true
+    return false
+  }
