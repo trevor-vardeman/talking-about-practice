@@ -19,3 +19,15 @@ function noBoringZeros(n) {
     }
     return negativeNum() ? -parseInt(arr.join("")) : parseInt(arr.join(""))
   }
+
+// better solution
+
+// function noBoringZeros(n) {
+//     while (n % 10 === 0 && n !== 0) {
+//       n = n / 10
+//     }
+//     return n
+//   }
+
+// explanation
+// as expected, this is a much better solution to the problem than i used to solve. basically, you just use a simple while statement to find the numbers so that while the number ends in 0, but isn't equal to 0, you divide the number by 0 and try again. so simple, but i like to make things difficult sometimes.
