@@ -9,3 +9,13 @@
 // 1050 -> 105
 // -1050 -> -105
 // Zero alone is fine, don't worry about it. Poor guy anyway
+
+function noBoringZeros(n) {
+    if (n.toString.length === 1 && n === 0) return 0
+    const negativeNum = () => n < 0 ? true : false
+    let arr = Array.from(Math.abs(n).toString()).map(num => parseInt(num))
+    while (arr[arr.length - 1] === 0 && arr.length > 1) {
+      arr.pop()
+    }
+    return negativeNum() ? -parseInt(arr.join("")) : parseInt(arr.join(""))
+  }
