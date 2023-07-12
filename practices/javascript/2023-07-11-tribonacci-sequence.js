@@ -17,5 +17,12 @@
 // [Personal thanks to Professor Jim Fowler on Coursera for his awesome classes that I really recommend to any math enthusiast and for showing me this mathematical curiosity too with his usual contagious passion :)]
 
 function tribonacci(signature,n){
-    //your code here
+    if (n === 0) return []
+    if (n < 3) return [...signature].slice(n - n, n)
+    let tribonacciSequence = [...signature]
+    let nextNumber = signature.reduce((sum, x) => sum += x)
+    for (let i = 0; i < n - 3; i++) {
+      tribonacciSequence.push(tribonacciSequence.slice(-3).reduce((sum, x) => sum += x))
+    }
+    return tribonacciSequence
   }
