@@ -7,5 +7,14 @@ function squareSum(numbers){
     return numbers.map(num => num * num).reduce((accumulator, x) => accumulator += x)
 }
 
-squareSum([])
-squareSum([1, 2, 2])
+// tests
+// squareSum([])
+// squareSum([1, 2, 2])
+
+// alternative solutions
+// function squareSum(numbers){
+//     return numbers.reduce((sum,num) => sum + (num * num), 0);
+//   }
+
+// explanation
+// this solution simplifies mine by using the reducer method's initial value parameter, which eliminates the need of the "if" statement in my solution
