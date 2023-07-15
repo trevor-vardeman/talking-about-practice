@@ -15,3 +15,11 @@ var min = function(list){
   var max = function(list){
     return Math.max(...list)
   }
+
+// better solution
+
+// const min = (list) => Math.min(...list);
+// const max = (list) => Math.max(...list);
+
+// explanation
+// just shortens it to arrow functionality, which takes away from the verbosity.
