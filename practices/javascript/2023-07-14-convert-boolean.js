@@ -5,3 +5,11 @@ function boolToWord(bool) {
         return "Yes"
     } else return "No"
 }
+
+// better solution
+
+// function boolToWord( bool ){
+//     return bool ? 'Yes':'No';
+//   }
+
+// definitely more elegant because 'bool' itself will be true/false
