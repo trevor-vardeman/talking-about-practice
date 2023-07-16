@@ -15,4 +15,13 @@ function betterThanAverage(classPoints, yourPoints) {
       return false
     } else return true
   }
-  
+
+
+// better solution
+
+//   function betterThanAverage(classPoints, yourPoints) {
+//     return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
+//   }
+
+// explanation
+// keeps it to one line and inherently returns true or false
