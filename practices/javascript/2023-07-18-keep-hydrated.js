@@ -15,3 +15,12 @@
 function litres(time) {
     return Math.floor(time / 2)
   }
+
+// different solution
+
+// function litres(time) {
+//     return Math.floor(time * 0.5);
+//   }
+
+// explanation
+// this aligns more appropriate to the problem by multiplying by a half. not really any better, but worth noting because of potential readability.
