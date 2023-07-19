@@ -18,7 +18,6 @@ function tribonacci(signature,n){
     if (n === 0) return []
     if (n < 3) return [...signature].slice(0, n)
     let tribonacciSequence = [...signature]
-    let nextNumber = signature.reduce((sum, x) => sum += x)
     for (let i = 0; i < n - 3; i++) {
       tribonacciSequence.push(tribonacciSequence.slice(-3).reduce((sum, x) => sum += x))
     }
