@@ -11,3 +11,10 @@ function repeatStr (n, s) {
     }
     return newString
   }
+
+// better solution
+//   repeatStr = (n, s) => s.repeat(n)
+
+
+// explanation
+// The String.prototype.repeat() method is perfect for thsi use-case, I just didn't know it existed.
