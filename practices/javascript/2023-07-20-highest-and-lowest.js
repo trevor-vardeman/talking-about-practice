@@ -9,3 +9,9 @@
 // There will always be at least one number in the input string.
 // Output string must be two numbers separated by a single space, and highest number is first.
 
+function highAndLow(numbers){
+    const arrOfNums = numbers.split(" ").map(x => parseInt(x))
+    const bigNum = arrOfNums.reduce((a, b) => Math.max(a, b))
+    const smallNum = arrOfNums.reduce((a, b) => Math.min(a, b))
+    return `${bigNum} ${smallNum}`
+  }
