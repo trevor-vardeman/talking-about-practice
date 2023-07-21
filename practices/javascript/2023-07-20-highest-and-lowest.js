@@ -15,3 +15,12 @@ function highAndLow(numbers){
     const smallNum = arrOfNums.reduce((a, b) => Math.min(a, b))
     return `${bigNum} ${smallNum}`
   }
+
+// better solution
+// function highAndLow(numbers){
+//     numbers = numbers.split(' ');
+//     return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+//   }
+
+// explanation
+// it removed the unnecessary mapping i did, and it it also negated the need to use the reducer function. i like that they went ahead and used the Math functions directly in the return line.
