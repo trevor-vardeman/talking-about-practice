@@ -5,3 +5,6 @@
 // 35231 => [1,3,2,5,3]
 // 0 => [0]
 
+function digitize(n) {
+    return n.toString().split("").reverse().map(element => parseInt(element))
+  }
