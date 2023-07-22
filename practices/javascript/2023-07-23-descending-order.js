@@ -11,4 +11,12 @@ function descendingOrder(n){
     return parseInt(n.toString().split("").map(element => parseInt(element)).sort((a, b) => b - a).join(""))
   }
 
-  
+// better solution
+
+// function descendingOrder(n){
+//     return parseInt(String(n).split('').sort().reverse().join(''))
+//   }
+
+// explanation
+
+// the this solution uses the String constructuor instead of toString. but what makes it more readable is the use of the reverse method in place of a less readable sort function.
