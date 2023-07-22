@@ -7,3 +7,8 @@
 
 // Input: 123456789 Output: 987654321
 
+function descendingOrder(n){
+    return parseInt(n.toString().split("").map(element => parseInt(element)).sort((a, b) => b - a).join(""))
+  }
+
+  
