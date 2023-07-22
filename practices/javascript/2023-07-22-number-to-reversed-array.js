@@ -7,4 +7,14 @@
 
 function digitize(n) {
     return n.toString().split("").reverse().map(element => parseInt(element))
-  }
+}
+
+// better solution
+
+// function digitize(n) {
+//   return String(n).split('').map(Number).reverse()
+// }
+
+// explanation
+
+// this is just a simpler version of what i did, using constructors
