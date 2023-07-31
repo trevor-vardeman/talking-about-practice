@@ -2,3 +2,11 @@
 
 // Example : n=5 --> [5,4,3,2,1]
 
+const reverseSeq = n => {
+    const arr = []
+    while (n > 0) {
+      arr.push(n)
+      n--
+    }
+    return arr
+  };
