@@ -10,3 +10,16 @@ const reverseSeq = n => {
     }
     return arr
   };
+
+// another solution
+
+// const reverseSeq = n => {
+//     let arr = [];
+//       for (let i=n; i>0; i--) {
+//         arr.push(i);
+//         } return arr;
+//     };
+
+// explanation
+
+// this is probably what i would normally do instead of using 'while', and it works just as well.
