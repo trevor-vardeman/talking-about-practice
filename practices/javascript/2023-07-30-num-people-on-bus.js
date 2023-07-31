@@ -17,4 +17,12 @@ var number = function(busStops){
       riders -= busStops[i][1]
     }
     return riders
-  }
+}
+
+// another solution
+
+// const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+
+// explanation
+
+// starting to love the reducer function and should have realized this was a good use for it!
