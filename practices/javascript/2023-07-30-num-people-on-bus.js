@@ -10,3 +10,11 @@
 
 // The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
 
+var number = function(busStops){
+    let riders = 0
+    for (let i = 0; i < busStops.length; i++) {
+      riders += busStops[i][0]
+      riders -= busStops[i][1]
+    }
+    return riders
+  }
