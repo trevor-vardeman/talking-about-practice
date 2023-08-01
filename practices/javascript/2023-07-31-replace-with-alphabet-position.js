@@ -19,5 +19,6 @@ function alphabetPosition(text) {
       if (alphabet[lowercaseLetter] !== undefined)
       numString += alphabet[lowercaseLetter] + " "
     })
+    numArray()
     return numString.trim()
 }
