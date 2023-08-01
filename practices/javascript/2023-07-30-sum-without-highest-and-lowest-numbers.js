@@ -14,4 +14,12 @@
 function sumArray(array) {
     if (!array || array.length <= 2) return 0
     return array.sort((a, b) => a - b).slice(0, -1).slice(1).reduce((acc, x) => acc += x)
-  }
+}
+
+// better solution
+
+// const sumArray = a => a ? a.sort((x, y) => x - y).slice(1, -1).reduce((s, e) => s + e, 0) : 0
+
+// explanation
+
+// this just tests if the array is truthy or not, and if not returns zero. honestly not quite sure how that works with an array that has one or two elements, but it's slightly more concise than mine with a similar idea.
