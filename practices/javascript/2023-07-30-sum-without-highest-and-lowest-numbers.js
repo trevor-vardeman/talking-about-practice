@@ -11,3 +11,7 @@
 // Input validation
 // If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
 
+function sumArray(array) {
+    if (!array || array.length <= 2) return 0
+    return array.sort((a, b) => a - b).slice(0, -1).slice(1).reduce((acc, x) => acc += x)
+  }
