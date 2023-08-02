@@ -13,4 +13,12 @@ function fakeBin(numString){
       }
     }
     return binaryString
-  }
+}
+
+// better solution
+
+// const fakeBin = x => x.split('').map(n => n < 5 ? 0 : 1).join('');
+
+// explanation
+
+// instead of using the Array.from constructor, split does the same thing essentially. from there, it's a simple map over the array to replace the number with 1 or 0, before rejoining the array in string form.
