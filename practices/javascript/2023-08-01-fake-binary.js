@@ -2,3 +2,15 @@
 
 // Note: input will never be an empty string
 
+function fakeBin(numString){
+    const numArray = Array.from(numString)
+    let binaryString = ""
+    for (let i = 0; i < numArray.length; i++) {
+      if (numArray[i] < 5) {
+        binaryString += 0
+      } else {
+        binaryString += 1
+      }
+    }
+    return binaryString
+  }
