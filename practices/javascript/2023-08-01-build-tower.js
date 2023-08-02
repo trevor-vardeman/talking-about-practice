@@ -19,3 +19,27 @@
 //   "***********"
 // ]
 
+function towerBuilder(nFloors) {
+    const towerArr = []  
+    let currentFloor = nFloors
+    
+    for (let i = 0; i < nFloors; i++) {
+      let element = []
+      
+      for (let j = i; j > 0; j--) {
+        element.push(" ")
+      }
+      
+      for (let k = currentFloor * 2 - 1; k > 0; k--) {
+        element.push("*")
+      }
+      
+      for (let l = i; l > 0; l--) {
+        element.push(" ")
+      }
+      
+      currentFloor--
+      towerArr.push(element.join(""))
+    }
+    return towerArr.reverse()
+  }
