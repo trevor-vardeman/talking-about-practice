@@ -42,4 +42,20 @@ function towerBuilder(nFloors) {
       towerArr.push(element.join(""))
     }
     return towerArr.reverse()
-  }
+}
+
+// better solution
+
+// function towerBuilder(nFloors) {
+//     let tower = []
+//     for (let i = 0; i < nFloors; i++) {
+//       tower.push(" ".repeat(nFloors - i - 1)
+//                + "*".repeat((i * 2)+ 1)
+//                + " ".repeat(nFloors - i - 1))
+//     }
+//     return tower
+// }
+
+// explanation
+
+// i somehow didn't think of .repeat() but obviously it would have been much better to use that over the extra 3 "for" loops i did, even though it's similar. for that reason, and for readability, i prefer this solution over others.
