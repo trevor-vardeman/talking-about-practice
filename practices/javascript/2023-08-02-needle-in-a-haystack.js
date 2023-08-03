@@ -20,3 +20,11 @@
 const findNeedle = haystack => `found the needle at position ${haystack.findIndex(element => element === "needle")}`
 
 // did the first solution for readability, then simplified it into the abo e solution.
+
+// better solution
+
+// const findNeedle = haystack => "found the needle at position " + haystack.indexOf("needle")
+
+// explanation
+
+// this is just a more concise use of "findIndex" than my solution, but both work
