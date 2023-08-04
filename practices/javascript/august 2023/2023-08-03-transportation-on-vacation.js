@@ -6,3 +6,13 @@
 
 // Write a code that gives out the total amount for different days(d).
 
+function rentalCarCost(d) {
+    const subtotal = d * 40
+    if (d >= 7) {
+      return subtotal - 50
+    } else if (d >= 3 && d < 7) {
+      return subtotal - 20
+    } else {
+      return subtotal
+    }
+  }
