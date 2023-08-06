@@ -9,3 +9,4 @@
 // "1405" --> 1405
 // "-7" --> -7
 
+const stringToNumber = str => parseInt(str)
