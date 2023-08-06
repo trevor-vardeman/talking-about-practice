@@ -7,3 +7,4 @@
 // name + " does not play banjo"
 // Names given are always valid strings.
 
+const areYouPlayingBanjo = name => name.toLowerCase().startsWith("r") ? `${name} plays banjo` : `${name} does not play banjo`
