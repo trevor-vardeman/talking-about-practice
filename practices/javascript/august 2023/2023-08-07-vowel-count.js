@@ -11,4 +11,12 @@ function getCount(str) {
         count += 1
     }
     return count
-  }
+}
+
+// better solution
+
+// function getCount(str) {
+//     return (str.match(/[aeiou]/ig)||[]).length;
+// }
+
+// regex makes this much simpler!
