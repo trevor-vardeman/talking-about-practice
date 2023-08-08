@@ -29,4 +29,5 @@ function rot13(str) {
       }
     }
     return finalizedRot13
-  }
+}
+
