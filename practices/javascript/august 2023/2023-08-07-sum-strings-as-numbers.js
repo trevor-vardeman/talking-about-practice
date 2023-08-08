@@ -13,4 +13,12 @@ function sumStrings(a, b) {
     const x = parseInt(a) ? BigInt(a) : BigInt(0)
     const y = parseInt(b) ? BigInt(b) : BigInt(0)
     return (x + y).toString()
-  }
+}
+
+// better solution
+
+// const sumStrings = (a, b) => (BigInt(a) + BigInt(b)).toString()
+
+// explanation
+
+// BigInt itself deals with 0 and empty strings without a problem, allowing this solution to be simpler than mine
