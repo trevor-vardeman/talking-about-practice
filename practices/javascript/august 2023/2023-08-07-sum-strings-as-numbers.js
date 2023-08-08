@@ -9,3 +9,8 @@
 
 // Python: your solution need to work with huge numbers (about a milion digits), converting to int will not work.
 
+function sumStrings(a, b) { 
+    const x = parseInt(a) ? BigInt(a) : BigInt(0)
+    const y = parseInt(b) ? BigInt(b) : BigInt(0)
+    return (x + y).toString()
+  }
