@@ -16,3 +16,13 @@ function pigIt(str){
     return rearrangedWord.join(" ")
 }
 
+// better solution
+
+// function pigIt(str){
+//     return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")
+// }
+
+// explanation
+
+// some regex i can't understand
+
