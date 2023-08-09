@@ -7,3 +7,10 @@
 
 // You can find some examples in the test fixtures.
 
+function humanReadable (seconds) {
+    let readableSeconds = seconds % 60
+    let readableMinutes = Math.floor(seconds / 60) % 60
+    let readableHours = Math.floor(seconds / 3600)
+    const format = int => int.toString().padStart(2, 0)
+    return `${format(readableHours)}:${format(readableMinutes)}:${format(readableSeconds)}`
+  }
