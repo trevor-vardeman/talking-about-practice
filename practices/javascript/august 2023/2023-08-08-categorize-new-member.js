@@ -12,3 +12,9 @@
 // input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
+function openOrSenior(data){
+    const solution = []
+    const test = data.map((member) => ((member[0] >= 55) && (member[1] >7)) ? solution.push("Senior") : solution.push("Open"))
+    return solution
+}
+
