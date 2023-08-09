@@ -18,3 +18,10 @@ function openOrSenior(data){
     return solution
 }
 
+// better solution
+
+// const openOrSenior = data => data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open')
+
+// explanation
+
+// the destructuring of the age and handicamp make this a better solution than mine in addition to the unncessary empty array
