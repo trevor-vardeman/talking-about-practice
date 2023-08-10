@@ -8,7 +8,7 @@
 //     "1 minute and 2 seconds"
 // * For seconds = 3662, your function should return
 //     "1 hour, 1 minute and 2 seconds"
-// For the purpose of this Kata, a year is 365 days and a day is 24 hours.
+// For the purpose of this Kata, a year is 365 days and a day is 24 hour).
 
 // Note that spaces are important.
 
@@ -25,3 +25,31 @@
 
 // A unit of time must be used "as much as possible". It means that the function should not return 61 seconds, but 1 minute and 1 second instead. Formally, the duration specified by of a component must not be greater than any valid more significant unit of time.
 
+function formatDuration (seconds) {
+  if (seconds === 0) return "now"
+  const readableSeconds = seconds % 60
+  const readableMinutes = Math.floor(seconds / 60) % 60
+  const readableHours = Math.floor(seconds / 3600) % 24
+  const readableDays = Math.floor(seconds / 86400) % 365
+  const readableYears = Math.floor(seconds / 31536000)
+  const timeArray = [["year", readableYears], ["day", readableDays], ["hour", readableHours], ["minute", readableMinutes], ["second", readableSeconds]]
+  const filteredArray = timeArray.filter((element => element[1] !== 0))
+  filteredArray.map(element => {
+    if (element[1] > 1) {
+      let interval = element[0]
+      interval += "s"
+      element.shift()
+      element.unshift(interval)
+    }
+  })
+  const unitsOfTime = filteredArray.length
+  if (unitsOfTime === 5) {
+    return `${filteredArray[0][1]} ${filteredArray[0][0]}, ${filteredArray[1][1]} ${filteredArray[1][0]}, ${filteredArray[2][1]} ${filteredArray[2][0]}, ${filteredArray[3][1]} ${filteredArray[3][0]} and ${filteredArray[4][1]} ${filteredArray[4][0]}`
+  } else if (unitsOfTime === 4) {
+    return `${filteredArray[0][1]} ${filteredArray[0][0]}, ${filteredArray[1][1]} ${filteredArray[1][0]}, ${filteredArray[2][1]} ${filteredArray[2][0]} and ${filteredArray[3][1]} ${filteredArray[3][0]}`
+  } else if (unitsOfTime === 3) {
+    return `${filteredArray[0][1]} ${filteredArray[0][0]}, ${filteredArray[1][1]} ${filteredArray[1][0]} and ${filteredArray[2][1]} ${filteredArray[2][0]}`
+  } else if (unitsOfTime === 2) {
+    return `${filteredArray[0][1]} ${filteredArray[0][0]} and ${filteredArray[1][1]} ${filteredArray[1][0]}`
+  } else return `${filteredArray[0][1]} ${filteredArray[0][0]}`
+}
