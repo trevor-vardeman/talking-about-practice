@@ -13,3 +13,10 @@ function doubleChar(str) {
     return newString
 }
 
+// another solution
+
+// const doubleChar = (str) => str.split("").map(c => c + c).join("");
+
+// explanation
+
+// definitely a differnt way to work this problem. first, the string is split where each character is its own element in an array, then that array is mapped so that each element is added to itself to create two, then the array is joined back toegther as a string and returned.
