@@ -17,3 +17,15 @@ function spinWords(string) {
   })
   return arr.join(" ")
 }
+
+// another solution
+
+// function spinWords(words){
+//   return words.split(' ').map(function (word) {
+//     return (word.length > 4) ? word.split('').reverse().join('') : word;
+//   }).join(' ');
+// }
+
+// explanation
+
+// this is essentially a more concise version of what i wrote with the ternary operator included.
