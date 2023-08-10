@@ -12,3 +12,14 @@
 // "    Hello     World   "                  =>  "#HelloWorld"
 // ""                                        =>  false
 
+function generateHashtag (str) {
+  if (str.trim() === "") return false
+  const stringArray = str.split(" ").map(word =>  {
+    let firstLetter = word.charAt(0).toUpperCase()
+    return firstLetter + word.slice(1)
+  })
+  const hashtag = "#" + stringArray.join("")
+  if (hashtag.length > 140) return false
+  return hashtag
+}
+
