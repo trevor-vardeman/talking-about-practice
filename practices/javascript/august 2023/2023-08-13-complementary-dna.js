@@ -11,3 +11,12 @@
 // "ATTGC" --> "TAACG"
 // "GTAT" --> "CATA"
 
+function DNAStrand(dna){
+    const dnaPairs = { "A": "T", "T": "A", "C": "G", "G": "C"}
+    let newDna = ""
+    for (let i = 0; i < dna.length; i++) {
+      newDna += dnaPairs[dna[i]]
+    }
+    return newDna
+}
+
