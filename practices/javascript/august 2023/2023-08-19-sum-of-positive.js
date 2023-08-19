@@ -9,3 +9,10 @@ function positiveSum (arr) {
     return arr.filter(num => num > 0).reduce((acc, x) => acc += x, 0)
 }
 
+// simlified solution
+
+// const positiveSum = arr => arr.filter(num => num >= 0).reduce((acc, x) => acc += x, 0)
+
+// explanation
+
+// the initial value being 0 allows it to return zero with an empty array
