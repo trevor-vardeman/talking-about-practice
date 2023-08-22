@@ -11,3 +11,18 @@
 // Example
 // wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
+function wave(str){
+  const waveArr = []
+  for (let i = 0; i < str.length; i++) {
+    let newStr = ""
+    newStr += str.slice(0, i)
+    if (str[i] === " ") {
+      continue
+    } else {
+      newStr += str.slice(i, i + 1).toUpperCase()
+    }
+    newStr += str.slice(i + 1)
+    waveArr.push(newStr)
+  }
+  return waveArr
+}
