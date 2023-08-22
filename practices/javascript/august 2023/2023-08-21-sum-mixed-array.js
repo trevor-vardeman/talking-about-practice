@@ -2,3 +2,4 @@
 
 // Return your answer as a number.
 
+const sumMix = x => x.map(a => parseInt(a)).reduce((acc, b) => acc += b, 0)
