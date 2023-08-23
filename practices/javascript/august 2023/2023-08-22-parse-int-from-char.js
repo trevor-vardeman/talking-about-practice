@@ -5,3 +5,11 @@
 // Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
 
 const getAge = inputString => parseInt(inputString.split(" ")[0])
+
+// simpler solution
+
+// const getAge = inputString => parseInt(inputString[0])
+
+// explanation
+
+// didn't even need to use .split because it was the first index of the entire string.
