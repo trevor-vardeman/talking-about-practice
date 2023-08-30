@@ -4,4 +4,4 @@
 // Example
 // ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
-const smash = words => words.length === 0 ? "" : words.join(" ")
+const smash = words => words.join(" ")
