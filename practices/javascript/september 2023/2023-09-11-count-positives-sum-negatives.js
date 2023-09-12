@@ -8,9 +8,10 @@
 // For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 
 function countPositivesSumNegatives(input) {
-  if (input === null || input.length === 0) return []
+  if (input === null || input.length === 0) {
+    return []
+  }
   
-  const result = []
   let positiveCount = 0
   let negativeSum = 0
   
@@ -23,6 +24,5 @@ function countPositivesSumNegatives(input) {
     }
   }
   
-  result.push(positiveCount, negativeSum)
-  return result
+  return [positiveCount, negativeSum]
 }
