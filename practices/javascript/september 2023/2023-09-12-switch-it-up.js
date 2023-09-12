@@ -26,5 +26,7 @@ function switchItUp(number) {
         return "Eight"
       case 9:
         return "Nine"
+      default:
+        return "Unknown number"
   }
 }
