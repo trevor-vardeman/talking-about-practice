@@ -24,3 +24,13 @@ function countSheeps(sheep) {
   
   return sheepCount
 }
+
+// better solution
+
+// function countSheeps(arrayOfSheeps) {
+//   return arrayOfSheeps.filter(Boolean).length;
+// }
+
+// explanation
+
+// filters the arrayOfSheeps and only keeps true values, then returns the lenght. i love this simplicity.
