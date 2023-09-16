@@ -12,3 +12,15 @@
 
 // Hint: Don't forget to check for bad values like null/undefined
 
+function countSheeps(sheep) {
+  if (sheep.length === 0) return 0
+  let sheepCount = 0
+  
+  for (let i = 0; i < sheep.length; i++) {
+    if (sheep[i] === true) {
+      sheepCount += 1
+    }
+  }
+  
+  return sheepCount
+}
